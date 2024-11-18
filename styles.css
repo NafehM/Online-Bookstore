@@ -1,0 +1,462 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.full-height-grow {
+  display: flex;
+  max-width: 1140;
+  flex-direction: column;
+}
+/*-----------------------------------------------------------------*/
+/* Navigation Starts */
+.main-header {
+  display: flex;
+  width: 80%;
+  align-self: center;
+  background-color: rgb(0, 80, 0);
+  font-size: 1rem;
+}
+.brand-logo {
+  position: relative;
+  top: -5%;
+  left: 2%;
+  margin-top: 0.7vh;
+  margin-left: 4vw;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 140px;
+  position: sticky;
+}
+.main-nav ul {
+  position: relative;
+  right: 2%;
+  display: flex;
+  padding: 0em 1.5em;
+  list-style: none;
+}
+.main-nav ul li a {
+  text-decoration: none;
+  padding: 60px 20px;
+  text-align: inherit;
+  font-size: 1.1em;
+  font-weight: normal;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  /*border: 2px solid red;*/
+}
+nav a:hover {
+  background-color: rgb(0, 50, 0);
+}
+/*-----------------------------------------------------------------*/
+/* Footer Starts Here */
+footer {
+  background-color: rgb(0, 80, 0);
+  padding: 50px 0;
+}
+.footer-wrapper {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+footer .ul {
+  display: flex;
+  margin-bottom: 1em;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+footer a {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.3rem;
+  background: none;
+  text-decoration: none;
+}
+small {
+  color: rgb(255, 255, 255);
+}
+/*-----------------------------------------------------------------*/
+/* Offer Marquee */
+.offer {
+  position: relative;
+  width: 80%;
+  align-self: center;
+  background-color: red;
+}
+.offer h4 {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  -moz-transform: translateX(100%); /*to reneder on Firefox*/
+  -webkit-transform: translateX(
+    100%
+  ); /*to reneder on browsers using webkit(like safari and chrome*/
+  transform: translateX(100%);
+
+  -moz-animation: offer 15s linear infinite;
+  -webkit-animation: offer 15s linear infinite;
+  animation: offer 15s linear infinite;
+}
+@keyframes offer {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+/*-----------------------------------------------------------------*/
+/*Homepage Starts Here!*/
+h1.welcome {
+  width: 80%;
+  margin: 30px;
+  padding: 10px;
+  font-size: 2.1em;
+  line-height: 1.4;
+  text-align: center;
+  align-self: center;
+  color: white;
+  background-color: rgb(0, 80, 0);
+  /*letter-spacing: 0.5rem;*/
+}
+
+/* Slider */
+.slider-container {
+  position: relative;
+  width: 80%;
+  align-self: center;
+  overflow: hidden;
+  box-shadow: 1px 2px 10px 5px black;
+}
+.slider {
+  overflow: hidden;
+}
+.slider {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite linear;
+}
+
+.slider img {
+  width: 20%;
+  float: left;
+}
+
+#bestsellers a {
+  text-decoration: none;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+/*-----------------------------------------------------------------*/
+/*Books page starts here */
+.catagories {
+  position: relative;
+  display: block;
+  width: 100%;
+  align-self: center;
+  background-color: rgb(0, 80, 0);
+}
+
+h1.catagories {
+  width: 100%;
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 2.1em;
+  line-height: 1.4;
+  text-align: center;
+  align-self: center;
+  color: white;
+  text-decoration: underline;
+  background-color: rgb(0, 80, 0);
+}
+.ul {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5em;
+  line-height: 1.4;
+  text-align: center;
+  align-self: center;
+  color: white;
+  background-color: rgb(0, 80, 0);
+}
+.ul a {
+  margin: 0 20px;
+  padding: 10px;
+  text-decoration: none;
+}
+.ul a:visited {
+  color: white;
+}
+
+.all-books {
+  position: relative;
+  display: block;
+  width: 80%;
+  margin: 20px;
+  align-self: center;
+  background-color: rgba(230, 230, 230, 0.5);
+  /*border: 2px solid red;*/
+}
+.all-books h2 {
+  position: relative;
+  margin-top: 50px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  color: white;
+  background-color: rgb(0, 80, 0);
+}
+
+.book-wrapper {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.books {
+  width: 25%;
+  height: 450px;
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+.books > * {
+  text-decoration: none;
+}
+.books h4 {
+  height: 37.33px;
+  color: rgb(0, 82, 204);
+}
+.books p {
+  color: black;
+}
+
+.books h4:hover {
+  color: rgb(20, 0, 204);
+}
+.books h4 a:hover {
+  color: rgb(20, 0, 204);
+}
+
+.books:hover {
+  background-color: white;
+  transition: ease 0.4s;
+}
+.books p {
+  margin-top: 10px;
+  height: 41.33px;
+}
+.price {
+  display: inline-block;
+  background-color: rgba(22, 122, 216, 0.5);
+  width: 86px;
+  height: 40px;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+}
+.price:hover {
+  background-color: rgba(126, 193, 255, 0.5);
+}
+blockquote {
+  position: relative;
+  width: 60%;
+  margin-top: 20px;
+  margin-left: 20%;
+  color: rgb(0, 50, 0);
+  text-align: justify;
+}
+.quotation em {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.quotation sub {
+  font-size: 1rem;
+  font-weight: bold;
+}
+/*-----------------------------------------------------------------*/
+/*Book Review Starts Here*/
+h1.reviews {
+  width: 80%;
+  margin: 30px;
+  padding: 10px;
+  font-size: 2.1em;
+  line-height: 1.4;
+  text-align: center;
+  align-self: center;
+  color: white;
+  background-color: rgb(0, 80, 0);
+}
+.book-review {
+  position: relative;
+  display: block;
+  align-self: center;
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.each-review {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  align-self: center;
+}
+.books-img {
+  position: relative;
+  float: left;
+  max-width: 190px;
+  max-height: 270px;
+  margin: 20px 10px;
+}
+.review {
+  position: relative;
+  padding: 10px;
+}
+.review h2 {
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+}
+/*-----------------------------------------------------------------*/
+/* Contact Us Page*/
+h1.faq {
+  width: 80%;
+  margin: 30px;
+  padding: 10px;
+  font-size: 2.1em;
+  line-height: 1.4;
+  text-align: center;
+  align-self: center;
+  color: white;
+  background-color: rgb(0, 80, 0);
+}
+.questions {
+  position: relative;
+  width: 80%;
+  margin-bottom: 20px;
+  align-self: center;
+  line-height: 1.5;
+  border: 2px solid rgb(0, 80, 0);
+  border-radius: 30px;
+}
+
+ul.faq-box {
+  position: relative;
+  width: 80%;
+  margin-left: 10%;
+  padding: 20px 0;
+  color: rgb(0, 50, 0);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+li.answer {
+  margin-bottom: 15px;
+  list-style: none;
+}
+
+.contact-wrapper {
+  position: relative;
+  align-self: center;
+  margin: 50px;
+  padding: 50px;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+.contact-wrapper h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  line-height: 2;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 80, 0);
+}
+.contact-wrapper p {
+  padding: 10px;
+  font-size: 1.3rem;
+  color: rgb(0, 50, 0);
+}
+/*-----------------------------------------------------------------*/
+@media screen and (max-width: 1060px) {
+  .container {
+    width: 100%;
+  }
+
+  .books {
+    width: 33.3333%;
+  }
+  /* Slider*/
+  .slider-container,
+  h1.welcome {
+    width: 100%;
+  }
+  h1.reviews {
+    width: 100%;
+  }
+  h1.faq {
+    width: 100%;
+  }
+  .questions {
+    width: 90%;
+  }
+}
